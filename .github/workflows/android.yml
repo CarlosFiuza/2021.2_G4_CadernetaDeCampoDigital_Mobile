@@ -27,7 +27,7 @@ jobs:
       run: flutter build apk
 
     - name: upload apk
-      uses: actions/upload-artifact@1
+      uses: actions/upload-artifact@v3
       with:
         name: apk
         path: build/app/outputs/flutter-apk/app-release.apk
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download APK from build
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v3
         with:
           name: apk
       - name: Create release
